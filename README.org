@@ -3,7 +3,9 @@
 
 * abook.lisp
 ** Description
- Convert csv contacts export from Thunderbird to abook format
+
+#+BEGIN_SRC C
+Convert csv contacts export from Thunderbird to abook format
  abook format
  static int csv_conv_table[] = {
  NAME,
@@ -12,10 +14,18 @@
  NOTES,
  NICK
  };
+#+END_SRC
  Thunder bird output
   First Name,Last Name,Display Name,Nickname,Primary Email,
+
+#+BEGIN_SRC shell
+# convert csv to abook
   abook --convert --infile tmpfile.csv --informat csv --outfile ~/.abook/test --outformat abook
+# convert abook to csv
   abook --convert --infile ~/.abook/addressbook --informat abook --outfile ~/.abook/test.csv --outformat csv
+#+END_SRC
+
+
 Read more at https://www.geeksaresexy.net/2010/04/28/how-to-copy-outlook-contacts-to-abook/#v5OugTlZlVjQqRwU.99
 ** TODO use prompt-query to select file for conversion
 ** TODO prior to addition of new addresses
