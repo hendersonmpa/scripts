@@ -28,8 +28,8 @@ Convert csv contacts export from Thunderbird to abook format
 
 Read more at https://www.geeksaresexy.net/2010/04/28/how-to-copy-outlook-contacts-to-abook/#v5OugTlZlVjQqRwU.99
 
-** TODO
+** Todo List
 - [ ] use prompt-query to select file for conversion
 - prior to addition of new addresses:
   - [ ] back-up old addressbook file
-  - [ ] dump and merge old abook addresses to merge
+  - [X] dump and merge old abook addresses to merge
