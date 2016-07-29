@@ -3,17 +3,16 @@
 
 * abook.lisp
 ** Description
-
+Add csv contacts exported from Thunderbird to abook addressbook
 #+BEGIN_SRC C
-Convert csv contacts export from Thunderbird to abook format
- abook format
- static int csv_conv_table[] = {
- NAME,
- EMAIL,
- PHONE,
- NOTES,
- NICK
- };
+  /* abook format */
+  static int csv_conv_table[] = {
+  NAME,
+  EMAIL,
+  PHONE,
+  NOTES,
+  NICK
+  };
 #+END_SRC
  Thunder bird output
   First Name,Last Name,Display Name,Nickname,Primary Email,

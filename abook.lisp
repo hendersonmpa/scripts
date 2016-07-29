@@ -1,18 +1,6 @@
-;;; Convert csv contacts export from Thunderbird to abook format
-;;; abook format
-;; static int csv_conv_table[] = {
-;; NAME,
-;; EMAIL,
-;; PHONE,
-;; NOTES,
-;; NICK
-;; };
-;;; Thunder bird output
-;;;  First Name,Last Name,Display Name,Nickname,Primary Email,
-;;;  abook --convert --infile tmpfile.csv --informat csv --outfile ~/.abook/test --outformat abook
-;;;  abook --convert --infile ~/.abook/addressbook --informat abook --outfile ~/.abook/test.csv --outformat csv
-;;;Read more at https://www.geeksaresexy.net/2010/04/28/how-to-copy-outlook-contacts-to-abook/#v5OugTlZlVjQqRwU.99
-
+;;; abook.lisp
+;;; Add csv contacts exported from Thunderbird to abook addressbook
+;;; See README for more info
 (defpackage :scripts.abook
   (:use :cl
         :cl-csv
@@ -60,7 +48,3 @@
                       :error-output "/home/mpah/.abook/errors.txt")))
 (write-abook-csv
  (process-thunderbird-csv "~/Desktop/collectedaddressbook.csv") "~/Desktop/abookformat.csv")
-
-;; abook --convert --infile abookformat.csv --informat csv --outfile ~/.abook/test --outformat book
-;; --convert --infile /home/mpah/Desktop/abookformat.csv --informat csv --outfile /home/mpah/.abook/test --outformat abook ")
-;; "--convert --infile /Desktop/abookformat.csv --informat csv --outfile ~/.abook/test --outformat abook ")
